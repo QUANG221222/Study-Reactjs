@@ -14,3 +14,16 @@ _React update component qua 4 bước_
 2. _Update virtual DOM_: Khi có thay đổi trong state hoặc props, react tạo 1 DOM ảo mới
 3. _Diffing Alrogithm(thuật toán khác biệt)_: so sánh giữa Virtual DOM cũ và mới để xác định sự khác biệt.
 4. _Cập nhật DOM thật_: chỉ những thành phần thay đổi được áp dụng vào DOM thật
+
+<!-- 2. JavaScript ES6 - Modules Tìm hiểu Named Export, Default Export  -->
+
+_Module là gì?_: là _1 file chứa mã JS_ mà có thể tái sử dụng ở các file khác.
+
+\_Trong JS, Export được sử dụng để chia sẻ các hàm, biến, class từ 1 Module. có 2 cách để 2 export:
+_Name Export_: Cho phép export nhiều phần tử từ 1 file, khi cần thì ta sử dụng từ khóa _Import_ từ Name Export.
+
+_Default Export_: _Mỗi module chỉ có 1 default export_
+\_Trong 1 module thì chỉ có 1 export default
+\_Nếu 1 file js có 1 export default, nó sẽ không được gộp vào đối tượng _{as 'name'}_ khi sử dụng _import \* as_
+
+_Đổi tên import_: df export không cần dùng _as_, named export cần cùng _as_
