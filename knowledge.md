@@ -27,3 +27,13 @@ _Default Export_: _Mỗi module chỉ có 1 default export_
 \_Nếu 1 file js có 1 export default, nó sẽ không được gộp vào đối tượng _{as 'name'}_ khi sử dụng _import \* as_
 
 _Đổi tên import_: df export không cần dùng _as_, named export cần cùng _as_
+
+<!-- 3. Hướng Dẫn Tạo Dự Án React CodeSandbox vs Local Project using VScode -->
+
+_Bước 1_: cài đặt môi trường nodejs
+_Bước 2_: gõ lệnh _npm install --global yarn_ (yarn nhanh hơn npm :D)
+_Bước 3_: gõ lệnh _yarn create vite_
+_Bước 4_:
+\_cd "file name"
+\_yarn
+\_yarn dev
