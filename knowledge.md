@@ -43,3 +43,6 @@ _Bước 4_:
 _Destructuring_ là một tính năng quan trọng, cho phép bạn _trích xuất dữ liệu_ từ _arrays_ hoặc _object_ một cách dễ dàng ngắn gọn.
 _Với array_: trích xuất dữ liệu _dựa trên vị trí (index)_
 _Với Object_: trích xuất dữ liệu _dựa trên thuộc tính (property name)_
+_Những kiến thức mới:_:
+_Destructuring Array_ : có thể đặt trong mảng 1 tên bất kỳ vì nó tách phần tử bằng vị trí index, có thể tạo phần tử mặc định, và dùng _...rest paramenter_
+_Destructuring Array_ : ko có thể đặt trong mảng 1 tên bất kỳ vì nó tách phần tử bằng dự vào key(thuộc tính) nên muốn thay đổi phải dùng đến _tên ví danh(alias)_, có thể tạo phần tử mặc định, và dùng _...rest paramenter_
