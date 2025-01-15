@@ -37,3 +37,9 @@ _Bước 4_:
 \_cd "file name"
 \_yarn
 \_yarn dev
+
+<!-- 8. Destructuring JavaScript -->
+
+_Destructuring_ là một tính năng quan trọng, cho phép bạn _trích xuất dữ liệu_ từ _arrays_ hoặc _object_ một cách dễ dàng ngắn gọn.
+_Với array_: trích xuất dữ liệu _dựa trên vị trí (index)_
+_Với Object_: trích xuất dữ liệu _dựa trên thuộc tính (property name)_
