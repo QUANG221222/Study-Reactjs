@@ -45,4 +45,8 @@ _Với array_: trích xuất dữ liệu _dựa trên vị trí (index)_
 _Với Object_: trích xuất dữ liệu _dựa trên thuộc tính (property name)_
 _Những kiến thức mới:_:
 _Destructuring Array_ : có thể đặt trong mảng 1 tên bất kỳ vì nó tách phần tử bằng vị trí index, có thể tạo phần tử mặc định, và dùng _...rest paramenter_
-_Destructuring Array_ : ko có thể đặt trong mảng 1 tên bất kỳ vì nó tách phần tử bằng dự vào key(thuộc tính) nên muốn thay đổi phải dùng đến _tên ví danh(alias)_, có thể tạo phần tử mặc định, và dùng _...rest paramenter_
+_Destructuring Object_ : ko thể đặt trong {} 1 tên bất kỳ vì nó tách phần tử bằng dự vào key(thuộc tính) nên muốn thay đổi phải dùng đến _tên ví danh(alias)_, có thể tạo phần tử mặc định, và dùng _...rest paramenter_
+
+<!-- 9. destructuring function -->
+
+_Destructuring_: còn có thể được sử dụng trực tiếp trong tham số (parameter) của một hàm. Điều này giúp _tránh việc lặp lại truy cập thuộc tính bên trong thân hàm_
