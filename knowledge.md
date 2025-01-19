@@ -50,3 +50,13 @@ _Destructuring Object_ : ko thể đặt trong {} 1 tên bất kỳ vì nó tác
 <!-- 9. destructuring function -->
 
 _Destructuring_: còn có thể được sử dụng trực tiếp trong tham số (parameter) của một hàm. Điều này giúp _tránh việc lặp lại truy cập thuộc tính bên trong thân hàm_
+
+<!-- 10.Review-Javascript-Spread-Operator -->
+
+_Spread Operator(...)_: tác dụng:
+`Trải các phần tử của một mảng` ra thành `Các phần tử riêng lẻ`
+`Trải các cặp key-value` trong một đối tượng `để kết hợp hoặc sao chép`
+_Thường được sử dụng để:_
+-Gộp (merge) dữ liệu
+-Sao chép mảng hoặc đối tượng
+-Thêm dữ liệu mới một cách linh hoạt
