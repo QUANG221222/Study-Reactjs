@@ -3,7 +3,7 @@
 _ReactJS_ : là 1 thư viện js dùng để xây dựng giao diện người dùng (UI)
 \_Được Facebook phát triển, và hiện họ sử dụng vào các sản phẩm của chọ như Facbook, Instagram,...(_meta: hệ sinh thái_)
 
-_Component(thành phần)_: là 1 thành phần cấu hình nên giao diện người dùng, khối mã hoàn chỉnh _html,css,js_
+_Component(thành phần)_: là 1 đối tượng của js là thành phần cấu hình nên giao diện người dùng, khối mã hoàn chỉnh _html,css,js_
 _Giải thích_: nếu trước chỉ có html,css,js thì sẽ có nhiều phần bị lặp lại, nên người ta đưa ra ý tưởng chia bố cục trang web thành các thành phần nhỏ hơn
 
 _Web xây dựng vào react ko load lại toàn bộ trang_:
@@ -50,3 +50,15 @@ _Destructuring Object_ : ko thể đặt trong {} 1 tên bất kỳ vì nó tác
 <!-- 9. destructuring function -->
 
 _Destructuring_: còn có thể được sử dụng trực tiếp trong tham số (parameter) của một hàm. Điều này giúp _tránh việc lặp lại truy cập thuộc tính bên trong thân hàm_
+
+<!-- 10.Review-Javascript-Spread-Operator -->
+
+_Spread Operator(...)_:
+
+- tác dụng:
+  `Trải các phần tử của một mảng` ra thành `Các phần tử riêng lẻ`
+  `Trải các cặp key-value` trong một đối tượng `để kết hợp hoặc sao chép`
+  _Thường được sử dụng để:_
+  -Gộp (merge) dữ liệu
+  -Sao chép mảng hoặc đối tượng
+  -Thêm dữ liệu mới một cách linh hoạt
