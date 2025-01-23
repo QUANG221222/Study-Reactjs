@@ -62,3 +62,4 @@ _Spread Operator(...)_:
   -Gộp (merge) dữ liệu
   -Sao chép mảng hoặc đối tượng
   -Thêm dữ liệu mới một cách linh hoạt
+  > > > > > > > > > Temporary merge branch 2
