@@ -53,6 +53,7 @@ _Destructuring_: còn có thể được sử dụng trực tiếp trong tham s�
 
 <!-- 10.Review-Javascript-Spread-Operator -->
 
+<<<<<<< HEAD
 _Spread Operator(...)_:
 
 - tác dụng:
@@ -62,3 +63,12 @@ _Spread Operator(...)_:
   -Gộp (merge) dữ liệu
   -Sao chép mảng hoặc đối tượng
   -Thêm dữ liệu mới một cách linh hoạt
+=======
+_Spread Operator(...)_: tác dụng:
+`Trải các phần tử của một mảng` ra thành `Các phần tử riêng lẻ`
+`Trải các cặp key-value` trong một đối tượng `để kết hợp hoặc sao chép`
+_Thường được sử dụng để:_
+-Gộp (merge) dữ liệu
+-Sao chép mảng hoặc đối tượng
+-Thêm dữ liệu mới một cách linh hoạt
+>>>>>>> ecfc04647e2798903b995e1d9901ea11f73a0612
