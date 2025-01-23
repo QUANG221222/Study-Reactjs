@@ -62,4 +62,17 @@ _Spread Operator(...)_:
   -Gộp (merge) dữ liệu
   -Sao chép mảng hoặc đối tượng
   -Thêm dữ liệu mới một cách linh hoạt
-  > > > > > > > > > Temporary merge branch 2
+
+<!-- 11. React js - Cách Sử Dụng JSX Trong React
+ -->
+
+_File `.jsx` là `javascript sytax extension` - cú pháp `cú pháp mở rộng của JavaScript` cho phép bạn viết mã đánh dấu giống HTML bên trong tệp JavaScript.
+`Trình duyệt không` thể `hiểu` trực tiếp \_file.jsx_, mà cần một công cụ để chuyển đổi sang `javascript` (Vite)
+_Khi nào dùng .js .jsx theo trường phái dùng .jsx_:thêm .jsx để giúp phân biệt rõ file đấy có render UI, clean code hơn còn .js thì sẽ là các function xử lý logic.
+
+_Fragment là gì?_
+\_Các viết sử dụng cặp thẻ `<>` và `</>` là cú pháp `Fragment trong React`. Đây là một tính năng giúp _nhóm nhiều phần tử con lại với nhau_ mà không cần thêm 1 thẻ HTML bao bọc nào (như div, span, v.v),...
+
+_Lý do sử dụng Fragment?_:
+`1. Không thêm thẻ dư thừa vào DOM `: Khi bạn chỉ cần nhóm các phần tử lại mà không muốn thêm thẻ HTML bao bọc, Fragment giúp tránh việc làm 'bẩn' cấu trúc DOM.
+`2. Giữ cho mã sạch sẽ (clean code):` giảu thiểu việc sử dụng các thẻ không cần thiết chỉ để bọc nội dung
