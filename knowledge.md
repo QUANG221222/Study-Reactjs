@@ -76,3 +76,13 @@ _Fragment là gì?_
 _Lý do sử dụng Fragment?_:
 `1. Không thêm thẻ dư thừa vào DOM `: Khi bạn chỉ cần nhóm các phần tử lại mà không muốn thêm thẻ HTML bao bọc, Fragment giúp tránh việc làm 'bẩn' cấu trúc DOM.
 `2. Giữ cho mã sạch sẽ (clean code):` giảu thiểu việc sử dụng các thẻ không cần thiết chỉ để bọc nội dung
+
+<!-- 12. React js - Component trong React -->
+
+`Quy ước Function trong ReactJS`
+_Như bạn đã thấy trong react, \_component thật ra chỉ là 1 hàm js_, tuy nhiên nó phải tuân theo phải tuân theo quy tắc:
+
+1. Tên function viết hoa _viết hoa chữ cái đầu_. Tại vì nhìn vào sẽ phân biệt đâu là thẻ tùy chỉnh và đâu là thẻ html mặc định
+2. Và nó phải _return về giá trị có thể hiển thị được_, và là _1 phần tử duy nhất_
+
+`Vanilla JavaScript` là thuật ngữ dùng để chỉ mã JS được viết mà không cần bất kỳ thư viện hoặc khuôn khổ bên ngoài nào
