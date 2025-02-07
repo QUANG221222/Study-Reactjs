@@ -86,3 +86,7 @@ _Như bạn đã thấy trong react, \_component thật ra chỉ là 1 hàm js_,
 2. Và nó phải _return về giá trị có thể hiển thị được_, và là _1 phần tử duy nhất_
 
 `Vanilla JavaScript` là thuật ngữ dùng để chỉ mã JS được viết mà không cần bất kỳ thư viện hoặc khuôn khổ bên ngoài nào
+
+<!-- 14.1 React js _ Props Trong React Là Gì -->
+
+`Trong react, chúng ta có thể tái sử dụng component để render 1 phần tử dễ dàng mà không cần phải code lại, và có thể gọi lại nhiều lần tùy thích. Bằng cách sử dụng props(property), ta có thể tùy chỉnh nội dung hành vi của mỗi lần gọi component.`
