@@ -89,4 +89,11 @@ _Như bạn đã thấy trong react, \_component thật ra chỉ là 1 hàm js_,
 
 <!-- 14.1 React js _ Props Trong React Là Gì -->
 
-`Trong react, chúng ta có thể tái sử dụng component để render 1 phần tử dễ dàng mà không cần phải code lại, và có thể gọi lại nhiều lần tùy thích. Bằng cách sử dụng props(property), ta có thể tùy chỉnh nội dung hành vi của mỗi lần gọi component.`
+`Props (Properties)` là một đối số được truyền vào các component của React.
+
+_Trong react_, chúng ta có thể tái sử dụng component để render 1 phần tử dễ dàng mà không cần phải code lại, và có thể gọi lại nhiều lần tùy thích. Bằng cách sử dụng **props(property)**, ta có thể tùy chỉnh nội dung hành vi của mỗi lần gọi component.
+
+<!-- 14.2 React js _ Tối ưu hoá code với Destructuring và Spread Operator  -->
+
+`Bước 1`: Sử dụng _Spread Operator_ để trải (spread) các thuộc tính của một object
+`Bước 2`: Sử dụng _Destructuring_ để giảm thiểu gọi: props

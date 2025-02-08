@@ -1,6 +1,6 @@
 import { myData } from "../data.js";
 import Header from "./components/Header/Header.jsx";
-import MainContent from "./components/Header/MainContent.jsx";
+import MainContent from "./components/MainContent/MainContent.jsx";
 
 function App() {
   return (
