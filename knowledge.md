@@ -102,3 +102,8 @@ _Trong react_, chúng ta có thể tái sử dụng component để render 1 ph�
 
 `children props`: tự động chứa mọi thứ bên trong cặp mở và đóng của component. `props.children` sẽ `hiển thị nội dung` mà bạn `đặt giữa cặp thẻ` <TabButton> và </TabButton> khi sử dụng component này
 -Sử dụng `Destructuring` để giảm thiểu gọi: props. React sẽ tự động hiểu `nội dung giữa thẻ mở và thẻ đống là props.children`
+
+<!-- 14.6 React js - React onClick -->
+
+`onClick và các event handler khác:` là `props đặt biệt` được React `hỗ trợ để gắn sự kiện` vào
+Bạn `Cần truyền một hàm sử lý` sự kiện vào `onClick để xác định hành động khi người dùng click`

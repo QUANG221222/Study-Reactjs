@@ -1,9 +1,17 @@
 import PropTypes from "prop-types";
 //Cách 1
 export default function TabButton({ children }) {
+  //js
+  // const btn = document.querySelector("button");
+  // btn.addEventListener("click", () => {
+  //   //làm một việt gì đó
+  // });
+  function handleClick() {
+    alert("Nút bấm được click");
+  }
   return (
     <li>
-      <button>{children}</button>
+      <button onClick={handleClick}>{children}</button>
     </li>
   );
 }
