@@ -78,11 +78,10 @@ _Lý do sử dụng Fragment?_:
 `2. Giữ cho mã sạch sẽ (clean code):` giảu thiểu việc sử dụng các thẻ không cần thiết chỉ để bọc nội dung
 
 <!-- 12. React js - Component trong React -->
-
 `Quy ước Function trong ReactJS`
 _Như bạn đã thấy trong react, \_component thật ra chỉ là 1 hàm js_, tuy nhiên nó phải tuân theo phải tuân theo quy tắc:
 
-1. Tên function viết hoa _viết hoa chữ cái đầu_. Tại vì nhìn vào sẽ phân biệt đâu là thẻ tùy chỉnh và đâu là thẻ html mặc định
+1. Tên function viết hoa chữ cái đầu\_. Tại vì nhìn vào sẽ phân biệt đâu là thẻ tùy chỉnh và đâu là thẻ html mặc định
 2. Và nó phải _return về giá trị có thể hiển thị được_, và là _1 phần tử duy nhất_
 
 `Vanilla JavaScript` là thuật ngữ dùng để chỉ mã JS được viết mà không cần bất kỳ thư viện hoặc khuôn khổ bên ngoài nào
@@ -107,3 +106,5 @@ _Trong react_, chúng ta có thể tái sử dụng component để render 1 ph�
 
 `onClick và các event handler khác:` là `props đặt biệt` được React `hỗ trợ để gắn sự kiện` vào
 Bạn `Cần truyền một hàm sử lý` sự kiện vào `onClick để xác định hành động khi người dùng click`
+
+<!-- 14.7 React js - Truyền hàm sự kiện từ Component cha vào Component con -->

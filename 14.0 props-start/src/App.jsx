@@ -4,8 +4,8 @@ import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
-  function handleSelect() {
-    alert("Nút bấm được click");
+  function handleSelect(selectButton) {
+    alert(`${selectButton} đã được chọn`);
   }
   return (
     <>
@@ -22,12 +22,12 @@ function App() {
         </section>
         <section id="examples">
           <h2>Examples</h2>
+          {/* prettier-ignore */}
           <menu>
-            <TabButton onSelect={handleSelect}>Component</TabButton>
-            <TabButton onSelect={handleSelect}>JSX</TabButton>
-            <TabButton onSelect={handleSelect}>Props</TabButton>
-            <TabButton onSelect={handleSelect}>State</TabButton>
-            {/* <TabButton batky="Component"></TabButton> */}
+            <TabButton onSelect={() => {handleSelect('component')}}>Component</TabButton>
+            <TabButton onSelect={() => {handleSelect('jsx')}}>JSX</TabButton>
+            <TabButton onSelect={() => {handleSelect('props')}}>Props</TabButton>
+            <TabButton onSelect={() => {handleSelect('state')}}>State</TabButton>
           </menu>
         </section>
       </main>
