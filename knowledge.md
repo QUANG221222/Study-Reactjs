@@ -78,6 +78,7 @@ _Lý do sử dụng Fragment?_:
 `2. Giữ cho mã sạch sẽ (clean code):` giảu thiểu việc sử dụng các thẻ không cần thiết chỉ để bọc nội dung
 
 <!-- 12. React js - Component trong React -->
+
 `Quy ước Function trong ReactJS`
 _Như bạn đã thấy trong react, \_component thật ra chỉ là 1 hàm js_, tuy nhiên nó phải tuân theo phải tuân theo quy tắc:
 
@@ -108,3 +109,19 @@ _Trong react_, chúng ta có thể tái sử dụng component để render 1 ph�
 Bạn `Cần truyền một hàm sử lý` sự kiện vào `onClick để xác định hành động khi người dùng click`
 
 <!-- 14.7 React js - Truyền hàm sự kiện từ Component cha vào Component con -->
+
+_Xem các file thay đổi_
+
+<!-- 14.9 State React -->
+
+_Vấn đề:_ các `hàm chỉ được gọi 1 lần khay chạy chương trình`, khi chúng ta click vào nút, thì hàm handleSelect được gọi, nhưng App() thì không được gọi lại vì vậy nó không gán lại giá trị vào tabContent
+
+\_Để cập nhật 1 thành phần chúng ta cần sử dụng `useState` - (_State có nghĩa là trạng thái, trong ngữ cảnh này, nó có nghĩa là trạng thái của dữ liệu, thay đổi từ A -> B_)
+\_Tất cả các thành phần bắt đầu bằng tiền tố `use`... được gọi là `react Hook`. `Hook bản chất là các hàm tính nangw` được react thiết kế sẵn.
+
+\_ 1. Khi sử dụng bắt buộc phải `Gọi tại cấp cao nhất của hàm thành phần `
+\_ 2. Không được `Gọi bên trong các câu lệnh if, while,...`
+
+`useState` nhận một `giá trị khởi tạo (initState) làm đối số
+\-Trả về một mảng gồm 2 phần tử: `giá trị hiện tại của State`và`hàm thay đổi State`
+`const [state, setState] = useState(initState)`
