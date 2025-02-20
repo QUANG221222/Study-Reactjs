@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { myData } from "../data.js";
+import { myData, EXAMPLES } from "../data.js";
 import Header from "./components/Header/Header.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("Vui lòng click vào nút");
+  const [selectedTopic, setSelectedTopic] = useState("components");
   console.log("App được gọi");
   function handleSelect(selectButton) {
     setSelectedTopic(selectButton);
@@ -27,13 +27,20 @@ function App() {
           <h2>Examples</h2>
           {/* prettier-ignore */}
           <menu>
-            <TabButton onSelect={() => {handleSelect('component')}}>Component</TabButton>
+            <TabButton onSelect={() => {handleSelect('components')}}>Components</TabButton>
             <TabButton onSelect={() => {handleSelect('jsx')}}>JSX</TabButton>
             <TabButton onSelect={() => {handleSelect('props')}}>Props</TabButton>
             <TabButton onSelect={() => {handleSelect('state')}}>State</TabButton>
           </menu>
         </section>
-        {selectedTopic}
+        <div id="tab-content">
+          {/* bracket notation kết hợp với Dot notation */}
+          <h3>{EXAMPLES[selectedTopic].title}</h3>
+          <p>{EXAMPLES[selectedTopic].desc}</p>
+          <pre>
+            <code>{EXAMPLES[selectedTopic].code}</code>
+          </pre>
+        </div>
       </main>
     </>
   );
