@@ -117,7 +117,7 @@ _Xem các file thay đổi_
 _Vấn đề:_ các `hàm chỉ được gọi 1 lần khay chạy chương trình`, khi chúng ta click vào nút, thì hàm handleSelect được gọi, nhưng App() thì không được gọi lại vì vậy nó không gán lại giá trị vào tabContent
 
 \_Để cập nhật 1 thành phần chúng ta cần sử dụng `useState` - (_State có nghĩa là trạng thái, trong ngữ cảnh này, nó có nghĩa là trạng thái của dữ liệu, thay đổi từ A -> B_)
-\_Tất cả các thành phần bắt đầu bằng tiền tố `use`... được gọi là `react Hook`. `Hook bản chất là các hàm tính nangw` được react thiết kế sẵn.
+\_Tất cả các thành phần bắt đầu bằng tiền tố `use`... được gọi là `react Hook`. `Hook bản chất là các hàm tính năng` được react thiết kế sẵn.
 
 \_ 1. Khi sử dụng bắt buộc phải `Gọi tại cấp cao nhất của hàm thành phần `
 \_ 2. Không được `Gọi bên trong các câu lệnh if, while,...`
