@@ -3,10 +3,22 @@ import { myData, EXAMPLES } from "../data.js";
 import Header from "./components/Header/Header.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("components");
-  console.log("App được gọi");
+  const [selectedTopic, setSelectedTopic] = useState("");
+  let tabContent = <p>Vui lòng click vào nút để lựa chọn 1 chủ để</p>;
+  if (selectedTopic) {
+    tabContent = (
+      <div id="tab-content">
+        <h3>{EXAMPLES[selectedTopic].title}</h3>
+        <p>{EXAMPLES[selectedTopic].desc}</p>
+        <pre>
+          <code>{EXAMPLES[selectedTopic].code}</code>
+        </pre>
+      </div>
+    );
+  }
   function handleSelect(selectButton) {
     setSelectedTopic(selectButton);
   }
@@ -33,14 +45,41 @@ function App() {
             <TabButton onSelect={() => {handleSelect('state')}}>State</TabButton>
           </menu>
         </section>
-        <div id="tab-content">
-          {/* bracket notation kết hợp với Dot notation */}
-          <h3>{EXAMPLES[selectedTopic].title}</h3>
-          <p>{EXAMPLES[selectedTopic].desc}</p>
-          <pre>
-            <code>{EXAMPLES[selectedTopic].code}</code>
-          </pre>
-        </div>
+
+        {/* Cách 1: Dùng toán tử 3 ngôi (ternary operator) */}
+        {/* {!selectedTopic ? (
+          // <p>Vui lòng click vào nút để lựa chọn 1 chủ để</p>
+          <DotLottieReact
+            src="https://lottie.host/d515e907-f059-4afc-b205-35aa98d76dc6/TKEZoVTSSc.lottie"
+            loop
+            autoplay
+          />
+        ) : (
+          <div id="tab-content"> */}
+        {/* bracket notation kết hợp với Dot notation */}
+        {/* <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].desc}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTopic].code}</code>
+            </pre>
+          </div>
+        )} */}
+
+        {/* Cách 2 dùng toán tử AND && */}
+        {/* {!selectedTopic &&
+          <p>Vui lòng click vào nút để lựa chọn 1 chủ để</p>}
+        {selectedTopic && (
+          <div id="tab-content">
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].desc}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTopic].code}</code>
+            </pre>
+          </div>
+        )}  */}
+
+        {/* Cách 3 */}
+        {tabContent}
       </main>
     </>
   );
