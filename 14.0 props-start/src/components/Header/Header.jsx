@@ -1,5 +1,4 @@
 import logo from "~/assets/logo-tuhoc.png";
-import "./Header.css";
 
 function Header() {
   return (
