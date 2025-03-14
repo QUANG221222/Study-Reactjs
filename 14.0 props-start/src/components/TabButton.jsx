@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 //Cách 1
-export default function TabButton({ children, onSelect, isSelected }) {
+export default function TabButton({ children, isSelected, ...props }) {
   //js
   // const btn = document.querySelector("button");
   // btn.addEventListener("click", () => {
@@ -8,7 +8,7 @@ export default function TabButton({ children, onSelect, isSelected }) {
   // });
   return (
     <li>
-      <button className={isSelected ? "active" : undefined} onClick={onSelect}>
+      <button className={isSelected ? "active" : undefined} {...props}>
         {children}
       </button>
     </li>
