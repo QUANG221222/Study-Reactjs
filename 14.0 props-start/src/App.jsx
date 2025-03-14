@@ -4,6 +4,7 @@ import Header from "./components/Header/Header.jsx";
 import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
 // import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Section from "./components/MainContent/Section.jsx";
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState("");
@@ -38,8 +39,7 @@ function App() {
             })}
           </ul>
         </section>
-        <section id="examples">
-          <h2>Examples</h2>
+        <Section title={"Example"} abc={"examples"}>
           {/* prettier-ignore */}
           <menu>
             <TabButton 
@@ -50,7 +50,7 @@ function App() {
             <TabButton isSelected={selectedTopic === "props"}  onSelect={() => {handleSelect('props')}}>Props</TabButton>
             <TabButton isSelected={selectedTopic === "state"}  onSelect={() => {handleSelect('state')}}>State</TabButton>
           </menu>
-        </section>
+        </Section>
 
         {/* Cách 1: Dùng toán tử 3 ngôi (ternary operator) */}
         {/* {!selectedTopic ? (
