@@ -5,6 +5,7 @@ import MainContent from "./components/MainContent/MainContent.jsx";
 import TabButton from "./components/TabButton.jsx";
 // import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Section from "./components/MainContent/Section.jsx";
+import Tabs from "./components/MainContent/Tabs.jsx";
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState("");
@@ -27,8 +28,7 @@ function App() {
     <>
       <Header />
       <main>
-        <section id="core-concepts">
-          <h2>Khái niệm chính trong React</h2>
+        <Section title={"Khái niệm chính trong React"} id={"core-concepts"}>
           <ul>
             {/* <MainContent {...myData[0]} />
             <MainContent {...myData[1]} />
@@ -38,10 +38,11 @@ function App() {
               return <MainContent key={item.title} {...item} />;
             })}
           </ul>
-        </section>
+        </Section>
         <Section title={"Example"} id={"examples"} className={"demo"}>
           {/* prettier-ignore */}
-          <menu>
+          <Tabs button={
+            <>
             <TabButton 
               isSelected={selectedTopic === "components"} 
               onClick={() => {handleSelect('components')}}
@@ -49,7 +50,10 @@ function App() {
             <TabButton isSelected={selectedTopic === "jsx"}  onClick={() => {handleSelect('jsx')}}>JSX</TabButton>
             <TabButton isSelected={selectedTopic === "props"}  onClick={() => {handleSelect('props')}}>Props</TabButton>
             <TabButton isSelected={selectedTopic === "state"}  onClick={() => {handleSelect('state')}}>State</TabButton>
-          </menu>
+            </>
+          }>
+            {tabContent}
+          </Tabs>
         </Section>
 
         {/* Cách 1: Dùng toán tử 3 ngôi (ternary operator) */}
@@ -85,7 +89,7 @@ function App() {
         )}  */}
 
         {/* Cách 3 */}
-        {tabContent}
+        {/* {tabContent} */}
       </main>
     </>
   );
