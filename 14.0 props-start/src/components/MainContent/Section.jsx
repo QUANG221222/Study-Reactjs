@@ -5,7 +5,7 @@ function Section({ title, children, ...props }) {
       <h2>{title}</h2>
       {children}
     </section>
-  );
+  )
 }
 
-export default Section;
+export default Section

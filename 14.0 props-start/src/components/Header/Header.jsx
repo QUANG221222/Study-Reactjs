@@ -1,5 +1,5 @@
-import logo from "~/assets/logo-tuhoc.png";
-import "./Header.css";
+import logo from '~/assets/logo-tuhoc.png'
+import './Header.css'
 
 function Header() {
   return (
@@ -13,7 +13,7 @@ function Header() {
         </p>
       </header>
     </>
-  );
+  )
 }
 
-export default Header;
+export default Header

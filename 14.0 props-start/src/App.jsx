@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { myData, EXAMPLES } from "../data.js";
-import Header from "./components/Header/Header.jsx";
-import MainContent from "./components/MainContent/MainContent.jsx";
-import TabButton from "./components/TabButton.jsx";
+import { useState } from 'react'
+import { myData, EXAMPLES } from '../data.js'
+import Header from './components/Header/Header.jsx'
+import MainContent from './components/MainContent/MainContent.jsx'
+import TabButton from './components/TabButton.jsx'
 // import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import Section from "./components/MainContent/Section.jsx";
-import Tabs from "./components/MainContent/Tabs.jsx";
+import Section from './components/MainContent/Section.jsx'
+import Tabs from './components/MainContent/Tabs.jsx'
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("");
-  let tabContent = <p>Vui lòng click vào nút để lựa chọn 1 chủ để</p>;
+  const [selectedTopic, setSelectedTopic] = useState('')
+  let tabContent = <p>Vui lòng click vào nút để lựa chọn 1 chủ để</p>
   if (selectedTopic) {
     tabContent = (
       <div id="tab-content">
@@ -19,29 +19,31 @@ function App() {
           <code>{EXAMPLES[selectedTopic].code}</code>
         </pre>
       </div>
-    );
+    )
   }
   function handleSelect(selectButton) {
-    setSelectedTopic(selectButton);
+    setSelectedTopic(selectButton)
   }
   return (
     <>
       <Header />
       <main>
-        <Section title={"Khái niệm chính trong React"} id={"core-concepts"}>
+        <Section title={'Khái niệm chính trong React'} id={'core-concepts'}>
           <ul>
             {/* <MainContent {...myData[0]} />
             <MainContent {...myData[1]} />
             <MainContent {...myData[2]} />
             <MainContent {...myData[3]} /> */}
             {myData.map((item) => {
-              return <MainContent key={item.title} {...item} />;
+              return <MainContent key={item.title} {...item} />
             })}
           </ul>
         </Section>
-        <Section title={"Example"} id={"examples"} className={"demo"}>
+        <Section title={'Example'} id={'examples'} className={'demo'}>
           {/* prettier-ignore */}
-          <Tabs button={
+          <Tabs 
+            ButtonsContainer="menu"
+            button={
             <>
             <TabButton 
               isSelected={selectedTopic === "components"} 
@@ -92,7 +94,7 @@ function App() {
         {/* {tabContent} */}
       </main>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

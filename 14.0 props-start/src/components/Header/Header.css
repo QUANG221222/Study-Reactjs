@@ -10,7 +10,7 @@ header img {
 
 header h1 {
   margin: 0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 5rem;
   background: linear-gradient(40deg, #4b695d, #56b656, #b7459d, #362773);
   -webkit-background-clip: text;
@@ -22,5 +22,5 @@ header p {
   margin: 0;
   font-size: 1.25rem;
   color: #8964b0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }

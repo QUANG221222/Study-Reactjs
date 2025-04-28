@@ -125,3 +125,8 @@ _Vấn đề:_ các `hàm chỉ được gọi 1 lần khay chạy chương trì
 `useState` nhận một `giá trị khởi tạo (initState) làm đối số
 \-Trả về một mảng gồm 2 phần tử: `giá trị hiện tại của State`và`hàm thay đổi State`
 `const [state, setState] = useState(initState)`
+
+<!-- 14.21 React Tips Tối ưu -->
+
+\_Trong JSX, nếu 1 tag `bắt đầu bằng chữ thường vd: <div> , <span>`, React sẽ hiểu `đó là một thẻ HTML gốc`
+\_Nếu `Một tag bắt đầu bằng chữ hoa vd: <MyComponent>`, React sẽ hiểu `đó là một thành phần của component`

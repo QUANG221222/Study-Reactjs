@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 //Cách 1
 export default function TabButton({ children, isSelected, ...props }) {
   //js
@@ -8,17 +8,17 @@ export default function TabButton({ children, isSelected, ...props }) {
   // });
   return (
     <li>
-      <button className={isSelected ? "active" : undefined} {...props}>
+      <button className={isSelected ? 'active' : undefined} {...props}>
         {children}
       </button>
     </li>
-  );
+  )
 }
 TabButton.propTypes = {
   children: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired,
-  isSelected: PropTypes.bool,
-};
+  isSelected: PropTypes.bool
+}
 //Cách 2
 // export default function TabButton({ batky }) {
 //   return (
