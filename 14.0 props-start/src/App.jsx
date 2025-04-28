@@ -42,7 +42,7 @@ function App() {
         <Section title={'Example'} id={'examples'} className={'demo'}>
           {/* prettier-ignore */}
           <Tabs 
-            ButtonsContainer="menu"
+            // ButtonsContainer="div"
             button={
             <>
             <TabButton 
