@@ -130,3 +130,14 @@ _Vấn đề:_ các `hàm chỉ được gọi 1 lần khay chạy chương trì
 
 \_Trong JSX, nếu 1 tag `bắt đầu bằng chữ thường vd: <div> , <span>`, React sẽ hiểu `đó là một thẻ HTML gốc`
 \_Nếu `Một tag bắt đầu bằng chữ hoa vd: <MyComponent>`, React sẽ hiểu `đó là một thành phần của component`
+
+<!-- 15. Sai Lầm Khi sử dụng useState Trong React -->
+
+\_Một trong những lỗi phổ biến nhất khi làm việc với state trong React là `nghĩ rằng state thay đổi ngay lập tức sau khi gọi setState()`. Tuy nhiên, React `Không cập nhật state ngay lập tức` mà chỉ `đánh dấu state sẽ thay đổi trong lần render tiếp theo`.
+
+_Khi gọi setState, React thực hiện các bước sau:_
+
+1.Đánh dấu state sẽ thay đổi
+2.Chờ render tiếp theo
+3.Cập nhật state mới khi render lại component
+-->Lưu ý: trong chế độ `StrictMode, React sẽ render 2 lần trong môi trường dev` để phát hiện lỗi tiềm ẩn trong các effect hoặc lifecycle methods. Nhưng trong `production, React sẽ chỉ render 1 lần`.
