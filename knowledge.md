@@ -141,3 +141,13 @@ _Khi gọi setState, React thực hiện các bước sau:_
 2.Chờ render tiếp theo
 3.Cập nhật state mới khi render lại component
 -->Lưu ý: trong chế độ `StrictMode, React sẽ render 2 lần trong môi trường dev` để phát hiện lỗi tiềm ẩn trong các effect hoặc lifecycle methods. Nhưng trong `production, React sẽ chỉ render 1 lần`.
+
+<!-- 16.1 React State_ Hiểu Rõ One-Way Binding & Two-Way Binding -->
+
+\_Theo mặc định Bất cứ khi nào `state thay đổi`, `giao diện (UI)` sau khi `được React re-render` thì `giá trị mới sẽ được hiển thị`. Đây chính là cơ chế của `One-Way Binding` trong React.
+
+`Two-Way Binding là gì ?`
+*là cơ chế giúp đồng bộ dữ liệu giao diện người dùng (UI) và state trong React.
+\_Khi dữ liệu trong `UI thay đổi --> state` sẽ cập nhật ngay lập tức. Khi `state thay đổi --> UI sẽ tự động cập nhật theo`.
+*Điều này giúp việc quản lý dữ liệu trở nên dễ dàng hơn, đặc biệt trong các form nhập dữ liệu.
+\_`Two-Way Binding trong React không chỉ dùng với input` mà có thể áp dụng với nhiều thành phần UI khác như `checkbox, radio, select, range, toggle, ...`
