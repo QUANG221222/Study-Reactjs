@@ -39,3 +39,7 @@ header p {
     font-size: 2.25rem;
   }
 }
+
+.my-paragraph {
+  color: yellow;
+}

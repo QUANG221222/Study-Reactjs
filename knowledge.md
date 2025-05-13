@@ -166,3 +166,5 @@ _Khi gọi setState, React thực hiện các bước sau:_
 `Nhược điểm` :
 \_Phải thêm mã vào từng thẻ html riêng lẻ, và mã bị trộn lẫn vào jsx không có sự tách biệt css, và jsx
 \_Không tái sử dụng được
+
+<!-- 17.4 CSS Module trong React là gì ? ->
