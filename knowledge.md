@@ -155,3 +155,14 @@ _Khi gọi setState, React thực hiện các bước sau:_
 <!-- 17.1 React CSS 01 - Dùng CSS toàn cục với Import CSS -->
 
 `Điểm quan trọng `: Mặc dù chúng ta đưa CSS vào trong component, nhưng khi render, toàn bộ CSS được đưa ra ngoài toàn cục
+
+<!-- 17.3 React CSS - Inline styling in Reactjs -->
+
+\_Chúng ta sẽ không truyền inline css theo cách thông thường như vầy `style="color: red"` trong react. Thay vào đó chúng ta sẽ truyền giá trị động trong jsx, sử dụng đối tượng để truyền dưới dạng key và value `style={{color: red}}`. Dấu ngoặc đầu tiên là truyền giá trị của biến của jsx, còn dấu ngoặc thứ 2 là đối tượng
+`Lưu ý: 1 số thuộc tính phải tuân theo quy tắc js, ví dụ` : background-color --> backgroundColor --> text-align -> textAlign
+`Ưu điểm` :
+\_Inline css thêm vào mã jsx, sẽ chỉ áp dụng lên thành phần đó
+\_Chúng ta có thể sử dụng inline css trong 1 số trường hợp cụ thể
+`Nhược điểm` :
+\_Phải thêm mã vào từng thẻ html riêng lẻ, và mã bị trộn lẫn vào jsx không có sự tách biệt css, và jsx
+\_Không tái sử dụng được
