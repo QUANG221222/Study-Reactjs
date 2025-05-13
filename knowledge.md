@@ -151,3 +151,7 @@ _Khi gọi setState, React thực hiện các bước sau:_
 \_Khi dữ liệu trong `UI thay đổi --> state` sẽ cập nhật ngay lập tức. Khi `state thay đổi --> UI sẽ tự động cập nhật theo`.
 *Điều này giúp việc quản lý dữ liệu trở nên dễ dàng hơn, đặc biệt trong các form nhập dữ liệu.
 \_`Two-Way Binding trong React không chỉ dùng với input` mà có thể áp dụng với nhiều thành phần UI khác như `checkbox, radio, select, range, toggle, ...`
+
+<!-- 17.1 React CSS 01 - Dùng CSS toàn cục với Import CSS -->
+
+`Điểm quan trọng `: Mặc dù chúng ta đưa CSS vào trong component, nhưng khi render, toàn bộ CSS được đưa ra ngoài toàn cục
