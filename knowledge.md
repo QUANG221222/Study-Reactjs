@@ -168,3 +168,13 @@ _Khi gọi setState, React thực hiện các bước sau:_
 \_Không tái sử dụng được
 
 <!-- 17.4 CSS Module trong React là gì ? ->
+
+<!-- 18.2 React useRef_ Làm Chủ .current để Điều Khiển Component -->
+
+`userRef` là một hook đặc biệt trong React, dùng để `tạo ra một đối tượng tham chiếu (reference object)`
+`userRef()` trả về một đối tượng có property.current
+\_Khi gán thuộc tính `ref={playerName}` (ví dụ: `<input ref={playerName}>`)
+\_React sẽ tự động gán element DOM thực tế vào `playerName.current`
+
+`?` : kiểm tra tất cả giá trị falsy
+`a ?? b`: Kiểm tra null và undefined

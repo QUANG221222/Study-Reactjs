@@ -1,22 +1,24 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Player() {
+  const playerName = useRef();
   const [enteredPlayerName, setEnteredPlayerName] = useState(null);
-  const [sumitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    setSubmitted(false);
-    setEnteredPlayerName(e.target.value);
-  };
+  // const [sumitted, setSubmitted] = useState(false);
+  // const handleChange = (e) => {
+  //   setSubmitted(false);
+  //   setEnteredPlayerName(e.target.value);
+  // };
   const handleClick = () => {
-    if (enteredPlayerName === null || enteredPlayerName === "") return;
-    setSubmitted(true);
+    if (enteredPlayerName === null) return;
+    // setSubmitted(true);
+    setEnteredPlayerName(playerName.current.value);
   };
   return (
     <section id="player">
-      <h2>Welcome {sumitted ? enteredPlayerName : "No Name"}</h2>
+      <h2>Welcome {enteredPlayerName ?? "No Name"}</h2>
       <div>
-        <input type="text" onChange={handleChange} />
+        {/* playerName sẽ đại diện cho ô input */}
+        <input type="text" ref={playerName} />
         <button onClick={handleClick}>Set Name</button>
       </div>
     </section>

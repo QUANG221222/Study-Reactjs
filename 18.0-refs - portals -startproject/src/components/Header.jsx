@@ -1,5 +1,3 @@
-import Player from "./Player";
-
 function Header() {
   return (
     <header>
@@ -7,7 +5,6 @@ function Header() {
         ĐẾM NGƯỢC <em>căn thời gian</em>
       </h1>
       <p>Thử tài ước lượng thời gian</p>
-      <Player />
     </header>
   );
 }
