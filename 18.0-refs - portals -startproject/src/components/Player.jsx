@@ -3,14 +3,8 @@ import { useState, useRef } from "react";
 function Player() {
   const playerName = useRef();
   const [enteredPlayerName, setEnteredPlayerName] = useState(null);
-  // const [sumitted, setSubmitted] = useState(false);
-  // const handleChange = (e) => {
-  //   setSubmitted(false);
-  //   setEnteredPlayerName(e.target.value);
-  // };
   const handleClick = () => {
     if (enteredPlayerName === null) return;
-    // setSubmitted(true);
     setEnteredPlayerName(playerName.current.value);
   };
   return (

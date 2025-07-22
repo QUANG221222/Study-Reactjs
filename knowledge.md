@@ -178,3 +178,10 @@ _Khi gọi setState, React thực hiện các bước sau:_
 
 `?` : kiểm tra tất cả giá trị falsy
 `a ?? b`: Kiểm tra null và undefined
+
+<!-- 18.3 So sánh useRef và useState_ Khi nào dùng cái nào? -->
+
+\_Khi khởi tạo lần đầu tiền, `propety.current.value` chưa có giá trị, nó `đang là undefine` nên nó không dùng được _playerName.current.value ?? "NoName"_
+
+_State(trạng thái)_: có ảnh hưởng đến UI. Khi thay đổi, giao diện sẽ cập nhật lại (re-render).
+_Refs(tham chiếu)_: Không có ảnh hưởng đến UI. Thay đổi ref không làm giao diện cập nhật lại
