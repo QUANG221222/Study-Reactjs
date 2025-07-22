@@ -4,8 +4,9 @@ function Player() {
   const playerName = useRef();
   const [enteredPlayerName, setEnteredPlayerName] = useState(null);
   const handleClick = () => {
-    if (enteredPlayerName === null) return;
-    setEnteredPlayerName(playerName.current.value);
+    const handlePlayerName = playerName.current.value;
+    if (handlePlayerName === "") return;
+    setEnteredPlayerName(handlePlayerName);
   };
   return (
     <section id="player">
