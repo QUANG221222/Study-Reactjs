@@ -185,3 +185,11 @@ _Khi gọi setState, React thực hiện các bước sau:_
 
 _State(trạng thái)_: có ảnh hưởng đến UI. Khi thay đổi, giao diện sẽ cập nhật lại (re-render).
 _Refs(tham chiếu)_: Không có ảnh hưởng đến UI. Thay đổi ref không làm giao diện cập nhật lại
+
+<!-- 18.8 useImperativeHandle Hook -->
+
+`useImperativeHandle` cho phép `component con chủ động chỉ định những hàm hoặc thuộc tính ` nào sẽ được `'lộ' ra ngoài cho component cha truy cập ` qua ref
+`Component cha chỉ được gọi những hàm/thuộc tính ` được `return trong object của userImperativeHandle`, còn lại hoàn toàn không được truy cập.
+==> Tóm lại:
+`Chỉ những gì được khai báo trong userImperativeHandle mới dùng được từ cha.`
+`Các biến, hàm, DOM khác là private, cha không truy cập được`

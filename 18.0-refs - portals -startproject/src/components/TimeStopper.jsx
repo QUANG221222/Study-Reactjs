@@ -10,7 +10,7 @@ function TimeStopper({ title, target }) {
   const handleStart = () => {
     timer.current = setTimeout(() => {
       // setTimerExpired(true);
-      dialog.current.showModal();
+      dialog.current.open();
     }, target * 1000);
     setTimerStart(true);
   };
