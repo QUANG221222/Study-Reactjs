@@ -3,6 +3,7 @@ import { useImperativeHandle, useRef } from "react";
 function ResultModal({ ref, remainingTime, targetTime, onReset }) {
   const userLost = remainingTime <= 0;
   const formattedRemainingTime = (remainingTime / 1000).toFixed(2);
+  const score = Math.round((1 - remainingTime / (targetTime * 1000)) * 100);
   const dialogInside = useRef();
   useImperativeHandle(ref, () => {
     return {
@@ -14,6 +15,7 @@ function ResultModal({ ref, remainingTime, targetTime, onReset }) {
   return (
     <dialog ref={dialogInside} className="result-modal">
       {userLost && <p>You Lost</p>}
+      {!userLost && <h2>Your Score: {score}</h2>}
       <p>
         Thời gian đích : <strong>{targetTime} second</strong>
       </p>
