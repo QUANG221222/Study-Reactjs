@@ -5,18 +5,21 @@ function TimeStopper({ title, target }) {
   const timer = useRef();
   const dialog = useRef();
 
-  const [timerStart, setTimerStart] = useState(false);
-  // const [timerExpired, setTimerExpired] = useState(false);
+  const [timeRemaining, setTimeRemaining] = useState(target * 1000);
+  const timerIsActive = timeRemaining > 0 && timeRemaining < target * 1000;
+
+  if (timeRemaining <= 0) {
+    clearInterval(timer.current);
+    dialog.current.open();
+  }
   const handleStart = () => {
-    timer.current = setTimeout(() => {
-      // setTimerExpired(true);
-      dialog.current.open();
-    }, target * 1000);
-    setTimerStart(true);
+    timer.current = setInterval(() => {
+      setTimeRemaining((prevTimeRemaining) => prevTimeRemaining - 10);
+    }, 10);
   };
   const handleStop = () => {
     clearTimeout(timer.current);
-    setTimerStart(false);
+    dialog.current.open();
   };
   return (
     <>
@@ -27,11 +30,11 @@ function TimeStopper({ title, target }) {
         <p className="challenge-time">
           {target} second {target > 0 ? "s" : ""}
         </p>
-        <button onClick={timerStart ? handleStop : handleStart}>
-          {timerStart ? "Stop" : "Start"}
+        <button onClick={timerIsActive ? handleStop : handleStart}>
+          {timerIsActive ? "Stop" : "Start"}
         </button>
-        <p className={timerStart ? "active" : ""}>
-          {timerStart ? "Timer is running" : "Timer inactive"}
+        <p className={timerIsActive ? "active" : ""}>
+          {timerIsActive ? "Timer is running" : "Timer inactive"}
         </p>
       </section>
     </>
