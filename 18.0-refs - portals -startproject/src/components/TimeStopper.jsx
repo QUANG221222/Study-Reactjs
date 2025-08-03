@@ -21,9 +21,17 @@ function TimeStopper({ title, target }) {
     clearTimeout(timer.current);
     dialog.current.open();
   };
+  const handleReset = () => {
+    setTimeRemaining(target * 1000);
+  };
   return (
     <>
-      <ResultModal ref={dialog} result={"lost"} targetTime={target} />
+      <ResultModal
+        ref={dialog}
+        remainingTime={timeRemaining}
+        targetTime={target}
+        onReset={handleReset}
+      />
       <section className="challenge">
         <h2>{title}</h2>
 
