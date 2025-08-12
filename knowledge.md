@@ -193,3 +193,7 @@ _Refs(tham chiếu)_: Không có ảnh hưởng đến UI. Thay đổi ref khôn
 ==> Tóm lại:
 `Chỉ những gì được khai báo trong userImperativeHandle mới dùng được từ cha.`
 `Các biến, hàm, DOM khác là private, cha không truy cập được`
+
+<!-- 18.12 Giải Thích Portals Trong React -->
+
+`Portals` là một tính năng trong React cho phép bạn `render một component, gắn` thẳng `vào một vị trí bất ký trên DOM` (ví dụ: ngoài cùng trong <body>)
