@@ -197,3 +197,12 @@ _Refs(tham chiếu)_: Không có ảnh hưởng đến UI. Thay đổi ref khôn
 <!-- 18.12 Giải Thích Portals Trong React -->
 
 `Portals` là một tính năng trong React cho phép bạn `render một component, gắn` thẳng `vào một vị trí bất ký trên DOM` (ví dụ: ngoài cùng trong <body>)
+
+<!-- 19. useReducer trong React_ Cách quản lý state phức tạp với useReducer -->
+
+`Reducer là một hàm nhận vào 2 tham số:`
+`state:` giá trị trạng thái hiện tại
+`action:` hành động (thông điệp) gửi lên để yêu cầu thay đổi state
+`Nhiệm vụ của reducer:`
+`Xử lý action:` Dựa vào action gửi lên, xác định cần cập nhật lại state như thế nào.
+`Trả về state mới:` Dựa vào action, reducer sẽ trả về giá trị state mới
