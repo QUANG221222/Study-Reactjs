@@ -206,3 +206,27 @@ _Refs(tham chiếu)_: Không có ảnh hưởng đến UI. Thay đổi ref khôn
 `Nhiệm vụ của reducer:`
 `Xử lý action:` Dựa vào action gửi lên, xác định cần cập nhật lại state như thế nào.
 `Trả về state mới:` Dựa vào action, reducer sẽ trả về giá trị state mới
+
+_Câu hỏi khi nào sử dụng useState và khi nào sử dụng useReducer?_
+`useState`: sử dụng khi quản lý các trạng thái đơn giản. (Phù hợp với các: giá trị kiểu dữ liệu nguyên thủy; một object hoặc array nhỏ, ít logic cập nhật). VD: bật/tắt modal, đếm số lần click, lưu input form đơn giản
+
+`useReducer:` sử dụng khi quản lý các trạng thái phức tạp hoặc có nhiều logic cập nhật. Phù hợp với: State là giá trị kiểu dữ liệu tham chiếu, nhiều loại hành động khác nhau để thay đổi state. Redux được phát triển dựa vào useReducer này.
+
+`Cách sử dụng userReducer:`:
+\_B1: tạo một biến `initState`
+\_B2: tạo các action `vd: const LOGIN = 'login';`
+\_B3: tạo hàm sử lý logic gầm 2 tham số là `state, action` (sử dụng switch; case)
+\_B4: Gọi hàm useReducer để sử dụng `const [currentState, dispatch] = useReducer(hàm vừa khởi tạo, initState)`
+
+<!-- 20.1 useContext React -->
+
+`useState` bị bất tiện khi phải truyền dữ liệu qua nhiều tầng component (`props drilling`)
+\_Có `những compent chỉ đóng vai trò trung gian` không dùng đến props nhưng `vẫn phải truyền prop qua` cho component con, gây thừa thãi và rối code.
+\_Nếu sau này thay đổi logic, `bỏ hoặc thay đổi component trung gian`, mà không cập nhật lại luồng props, `sẽ dễ bị lỗi, và rất khó kiểm soát.`
+
+`Cách xử lý: sử lý useContext`: là một hook trong React dùng đề `truyền dữ liệu giữa các component` mà `không cần` phải `truyền props qua từng tầng (props drilling)`
+
+`Cách sử dụng useContext`:
+\_B1: Tạo file Context
+\_B2: Dùng Provider để 'bọc' cây component và tạo props value={{...}}
+\_B3: Dùng useContext ở bất kỳ component con nào để 'lấy' dữ liệu ra
