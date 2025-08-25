@@ -230,3 +230,15 @@ _Câu hỏi khi nào sử dụng useState và khi nào sử dụng useReducer?_
 \_B1: Tạo file Context
 \_B2: Dùng Provider để 'bọc' cây component và tạo props value={{...}}
 \_B3: Dùng useContext ở bất kỳ component con nào để 'lấy' dữ liệu ra
+
+<!-- 21.1 React useEffect Là Gì_ Hướng Dẫn Toàn Tập Cho Người Mới Bắt Đầu -->
+
+`useEffect` trong React là một hook dùng để xử lý các '`side effect`' (tác động phụ) trong component, ví dụ như:
+`Gọi API,  cập nhật DOM, setTimeout, setInterval, hoặc lắng nghe/ hủy lắng nghe event...`
+`Hiểu đơn giản, sau khi` React đã render xong component. `useEffect = 'React ơi, sau khi reder xong, hãy giúp tôi làm cái việc này nhé'`(Ví dụ: gọi API -_Application Programming Interface_, setTimeout, addEventListener)
+`Cách dùng cơ bản:`
+\_1. Nếu _không truyền denpency, hàm callback chạy sau mỗi lần render_
+\_2. Nếu mảng _dependency là [] rỗng_, làm _chỉ chạy 1 lần_ sau khi component mount.
+\_3. Chạy lại mỗi khi giá trị trong mảng denpendecy thay đổi
+
+`useEffect(Callback, [deps])`
