@@ -242,3 +242,5 @@ _Câu hỏi khi nào sử dụng useState và khi nào sử dụng useReducer?_
 \_3. Chạy lại mỗi khi giá trị trong mảng denpendecy thay đổi
 
 `useEffect(Callback, [deps])`
+
+_JSON: javascript object notation: là một mảng bên trong là các đối tượng_
