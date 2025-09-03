@@ -244,3 +244,10 @@ _Câu hỏi khi nào sử dụng useState và khi nào sử dụng useReducer?_
 `useEffect(Callback, [deps])`
 
 _JSON: javascript object notation: là một mảng bên trong là các đối tượng_
+
+<!-- 22. ReactJS useLayoutEffect_ Hiểu Rõ Khác Biệt với useEffect Qua Ví Dụ Thực Tế -->
+
+`Render`: Hoàn thành quá trình thêm mới, hoặc cập nhật, xóa phần tử DOM -> tạo ra DOM hoàn chỉnh.
+`Paint`: Vẽ các phần tử DOM lên màn hình cho người dùng thấy
+
+`Nhược điểm của useEffect(): Callback` trong _useEffect chạy sau khi paint_. Nếu _chỉnh sửa DOM_ hoặc _layout_ tại đây sẽ làm _giao diện phải vẽ lại lần nữa, gây nhấp nháy(flicker)_
