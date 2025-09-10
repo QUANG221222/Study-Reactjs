@@ -251,3 +251,14 @@ _JSON: javascript object notation: là một mảng bên trong là các đối t
 `Paint`: Vẽ các phần tử DOM lên màn hình cho người dùng thấy
 
 `Nhược điểm của useEffect(): Callback` trong _useEffect chạy sau khi paint_. Nếu _chỉnh sửa DOM_ hoặc _layout_ tại đây sẽ làm _giao diện phải vẽ lại lần nữa, gây nhấp nháy(flicker)_
+
+<!-- 23. React.memo giải thích dễ hiểu – Khi nào nên dùng và lưu ý cho người mới -->
+
+\_Mặc định khi , _component cha reder lại, thì toàn bộ các component con cũng sẽ reder lại_, dù **Props không thay đổi**. Điều này _gây lãng phí tài nguyên_ đặt biệt với các component con phức tạp, dẫn đến ứng dụng chậm, giật lag
+
+`React.memo()` là một Higher Order Component(HOC) - hay có thể tạm hiểu là một phương thức (function) do thư việc Reat cung cấp. Cách dùng dùng HOC là "bọc" (wrap) một component khác lại.
+
+`React.memo()` - Kiểm soát việc render lại component con
+
+- Próp truyền vào con không thay đổi ->con sẽ không reder lại
+- Props truyền vào còn thay đổi -> con sẽ reder lại
