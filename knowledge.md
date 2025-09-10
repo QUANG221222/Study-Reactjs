@@ -262,3 +262,10 @@ _JSON: javascript object notation: là một mảng bên trong là các đối t
 
 - Próp truyền vào con không thay đổi ->con sẽ không reder lại
 - Props truyền vào còn thay đổi -> con sẽ reder lại
+
+<!-- 24. React.memo & useCallback_ Cách Giảm Số Lần Render Component Con Hiệu Quả -->
+
+`const yourFunctionName = useCallback(callbackFunction, [dependencies])`
+
+`callbackFunction` hàm callback cần ghi nhớ.
+[dependencies]: Mảng phụ thuộc, giống useEffect. Khi giá trị nào trong mảng này đổi, callback mới sẽ được tạo lại.Nếu để mảng rỗng, hàm chỉ tạo một lần duy nhất(từ đầu đến cuối component)
