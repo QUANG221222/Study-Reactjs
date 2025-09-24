@@ -269,3 +269,13 @@ _JSON: javascript object notation: là một mảng bên trong là các đối t
 
 `callbackFunction` hàm callback cần ghi nhớ.
 [dependencies]: Mảng phụ thuộc, giống useEffect. Khi giá trị nào trong mảng này đổi, callback mới sẽ được tạo lại.Nếu để mảng rỗng, hàm chỉ tạo một lần duy nhất(từ đầu đến cuối component)
+
+<!-- 25 React useMemo Cách tối ưu component với phép tính phức tạp -->
+
+`const nameVariable = useMemo(computeFunction, [dependencies])`
+`computeFunction:` Hàm trả về giá trị cần "ghi nhớ"
+`[dependencies]:` Mảng phụ thuộc, giống useEffect. Khi đổi, giá trị mới sẽ được tính
+
+_So sánh giữa memo và useMemo:_
+`React.memo:` Ghi nhớ component -> Tránh render lại khi props không đổi.
+`useMemo:` Ghi nhớ giá trị -> Tránh tính toán lại khi denpendecies không đổi
