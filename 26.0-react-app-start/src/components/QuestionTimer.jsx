@@ -5,14 +5,22 @@ function QuestionTimer({ timeout, onTimeout }) {
 
   useEffect(() => {
     console.log("Timeout được gọi");
-    setTimeout(onTimeout, timeout);
+    const setTimeoutId = setTimeout(onTimeout, timeout);
+
+    return () => {
+      clearTimeout(setTimeoutId);
+    };
   }, [timeout, onTimeout]);
 
   useEffect(() => {
     console.log("set interval được gọi");
-    setInterval(() => {
+    const setIntervalId = setInterval(() => {
       setRemainningTime((prev) => prev - 100);
     }, 100);
+
+    return () => {
+      clearInterval(setIntervalId);
+    };
   }, []);
 
   return (
