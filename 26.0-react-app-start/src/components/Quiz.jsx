@@ -2,6 +2,7 @@ import { useState } from "react";
 import QUESTION from "../questions";
 import { shuffleArray } from "../../Thuattoan/main";
 import QuizCompleImg from "../assets/quiz-complete.png";
+import QuestionTimer from "./QuestionTimer";
 
 function Quiz() {
   const [userAnswers, setUserAnswers] = useState([]);
@@ -28,11 +29,15 @@ function Quiz() {
     <>
       <div id="quiz">
         <div id="question">
+          <QuestionTimer
+            timeout={10000}
+            onTimeout={() => handleSelectAnswer(null)}
+          />
           <h2>{QUESTION[activeQuestionIndex].text}</h2>
           <ul id="answers">
             {shuffleArray(QUESTION[activeQuestionIndex].answers).map(
               (answer) => (
-                <li id={answer} className="answer">
+                <li key={answer} className="answer">
                   <button onClick={handleSelectAnswer}>{answer}</button>
                 </li>
               )
