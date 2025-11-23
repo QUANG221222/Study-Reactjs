@@ -12,7 +12,7 @@ import QUESTIONS from "../src/questions.js";
   Kết thúc khi i = 1
   */
 // debugger;
-function shuffleArray(array) {
+export function shuffleArray(array) {
   for (let i = array.length - 1; i >= 1; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -21,6 +21,6 @@ function shuffleArray(array) {
 }
 
 //tạo bản sao mảng gốc 0 để xáo trộn (0 làm thay đổi mảng gốc) -
-const shuffledAnswers = [...QUESTIONS[1].answers];
-const outPutAns = shuffleArray(shuffledAnswers);
-console.log(outPutAns);
+// const shuffledAnswers = [...QUESTIONS[1].answers];
+// const outPutAns = shuffleArray(shuffledAnswers);
+// console.log(outPutAns);
